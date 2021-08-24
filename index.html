@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    
+
+    * {
+      margin : 0;
+      padding : 0;
+      box-sizing : border-box;
+    }
+
+    html {
+      font-size : 62.5%;
+    }
+
+    body {
+      font-family : 'Red Hat Display', sans-serif;
+      font-weight : 400;
+
+      background-image : url(images/pattern-background-desktop.svg);
+      background-size : cover;
+      background-position : center;
+    }
+
+    .container {
+      width : 400px;
+      border-radius : 20px;
+      overflow : hidden;
+      margin : 100px auto;
+    }
+
+    .card {
+      padding : 3.2rem 6.4rem;
+      background-color: #fff;
+    }
+
+    .card-img img{
+      display : block;
+      width : 100%;
+      border-bottom : 3.2rem;
+    }
+
+    .card-title {
+      font-size : 2.8rem;
+      margin-bottom : 2rem;
+      text-align : center;
+      letter-spacing : -0.75px;
+      font-weight: 900;
+    }
+
+    .card-text {
+      font-size : 1.6rem;
+      line-height : 1.6;
+      text-align : center;
+      margin-bottom: 1.6rem;
+      letter-spacing : 0.5px;
+      color :  hsl(224, 23%, 55%);
+    }
+
+    .plan {
+      display : flex;
+      align-items : center;
+      gap : 1.6rem;
+      padding : 1.6rem;
+
+      background-color: hsl(225, 100%, 98%);
+      border-radius : 11px;
+
+      margin-bottom : 1.6rem;
+    }
+
+    .plan-title {
+      font-size : 1.2rem;
+      font-weight : 900;
+    }
+
+    .plan-price {
+      color : hsl(224, 23%, 55%);
+    }
+
+    .price {
+      display : flex;
+      flex-direction : column;
+      gap : 0.8rem;
+    }
+
+    .link:link,
+    .link:visited {
+      font-size : 1.6rem;
+      color : hsl(245, 75%, 52%);
+      transition : all 0.3s;
+    }
+
+    .link:hover,
+    .link:active {
+      text-decoration : none;
+    }
+
+    .btn:link,
+    .btn:visited {
+      display : block;
+      font-size : 1.2rem;
+      padding : 1.6rem 6.4rem;
+      text-decoration : none;
+      letter-spacing : 0.75px;
+      
+      border-radius : 1.2rem;
+      text-align : center;
+      font-weight : 600;
+
+      transition : all 0.3s;
+    }
+
+    .btn--payment:link,
+    .btn--payment:visited {
+      
+      color : #fff;
+      background-color: hsl(245, 75%, 52%);
+
+      margin-bottom : 1.2rem;
+      box-shadow : 0 15px 2px 8px rgba(245, 247, 255, 0.75);
+
+    }
+
+    .btn--cancel:link,
+    .btn--cancel:visited {
+      color : hsl(224, 23%, 55%);
+    }
+
+    .btn--cancel:hover,
+    .btn--cancel:active {
+      color : #555;
+    }
+
+
+    /* helper classes */
+
+    .margin-left-extreme {
+      margin-left : auto;
+    }
+
+
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container"> 
+
+    <figure class="card-img"> <img src="images/illustration-hero.svg" alt="a woman listening to music and enjoying"/>
+
+    </figure>
+
+    <div class="card">
+      
+      <h1 class="card-title">Order Summary</h1> 
+      
+      <p class="card-text"> You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like! </p>
+
+      <div class="plan">
+
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#DFE6FB"/><path fill="#717FA6" fill-rule="nonzero" d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z"/></g></svg>
+
+        <div class="price">
+
+          
+          <span class="plan-title">  Annual Plan  </span>
+          <span class="plan-price"> $59.99/year </span>
+        </div>
+        
+        <a class="link margin-left-extreme" href="#">Change</a>
+      </div>
+        
+        <a class="btn btn--payment" href="#"> Proceed to Payment</a>
+        <a class="btn btn--cancel" href="#"> Cancel Order </a>
+      </div>
+      </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Tanish Goyal</a>.
+  </div>
+</body>
+</html>
